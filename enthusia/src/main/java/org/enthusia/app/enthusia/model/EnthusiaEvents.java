@@ -63,15 +63,11 @@ public final class EnthusiaEvents {
             R.string.enthusia_kabaddi,
             R.string.enthusia_athletics,
             R.string.enthusia_throwball,
-            R.string.enthusia_squash,
-            R.string.enthusia_boxing,
             R.string.enthusia_carrom,
             R.string.enthusia_chess,
-            R.string.enthusia_dodgeball,
             R.string.enthusia_badminton,
             R.string.enthusia_kho,
             R.string.enthusia_swimming,
-            R.string.enthusia_handball,
             R.string.enthusia_handball,
             R.string.enthusia_handball
     };
