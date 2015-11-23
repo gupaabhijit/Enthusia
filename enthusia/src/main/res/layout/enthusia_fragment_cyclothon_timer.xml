@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- Event Pic -->
+    <ImageView
+        android:id="@+id/cyc_logo"
+        android:contentDescription="@string/content_description"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_enthu_cyclothon"
+        android:layout_margin="8dp"
+        />
+    <TextView
+        android:id="@+id/activity_countdown_timer_note"
+
+        android:tag="Light"
+        android:textSize="@dimen/twenty_sp"
+        android:text="@string/countdown_note"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textColorHighlight="@color/round_progress_blue"
+        android:paddingLeft="30dp"
+        android:layout_below="@+id/cyc_logo"
+        android:paddingRight="@dimen/fifteen_dp"
+        android:layout_centerVertical="true"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/activity_countdown_wheels_layout"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:paddingLeft="@dimen/fifteen_dp"
+        android:paddingRight="@dimen/fifteen_dp"
+        android:paddingTop="@dimen/twenty_dp"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/activity_countdown_timer_note"
+        android:gravity="center" >
+
+        <org.enthusia.app.enthusia.fragments.TimerFragment.ProgressWheel
+            android:id="@+id/activity_countdown_timer_days"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+            ProgressWheel:rimColor="@color/rim_color_gray"
+            ProgressWheel:barColor="@color/round_progress_blue"
+            ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <org.enthusia.app.enthusia.fragments.TimerFragment.ProgressWheel
+            android:id="@+id/activity_countdown_timer_hours"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+            ProgressWheel:rimColor="@color/rim_color_gray"
+            ProgressWheel:barColor="@color/round_progress_blue"
+            ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <org.enthusia.app.enthusia.fragments.TimerFragment.ProgressWheel
+            android:id="@+id/activity_countdown_timer_minutes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+            ProgressWheel:rimColor="@color/rim_color_gray"
+            ProgressWheel:barColor="@color/round_progress_blue"
+            ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <org.enthusia.app.enthusia.fragments.TimerFragment.ProgressWheel
+            android:id="@+id/activity_countdown_timer_seconds"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+            ProgressWheel:rimColor="@color/rim_color_gray"
+            ProgressWheel:barColor="@color/round_progress_blue"
+            ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_countdown_labels_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/fifteen_dp"
+        android:paddingRight="@dimen/fifteen_dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/activity_countdown_wheels_layout" >
+
+        <TextView
+            android:id="@+id/activity_countdown_timer_days_text"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/days"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/activity_countdown_timer_hours_text"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/hours"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/activity_countdown_timer_minutes_text"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/minutes"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/activity_countdown_timer_seconds_text"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/seconds"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+
+    <!-- Event Pic -->
+    <ImageView
+        android:id="@+id/mara_logo"
+        android:contentDescription="@string/content_description"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_enthu_marathon"
+        android:layout_margin="8dp"
+        />
+    <TextView
+        android:id="@+id/activity_countdown_timer_note_marathon"
+
+        android:tag="Light"
+        android:textSize="@dimen/twenty_sp"
+        android:text="@string/countdown_note_mara"
+        android:layout_height="103dp"
+        android:layout_width="match_parent"
+        android:textColorHighlight="@color/round_progress_blue"
+        android:paddingLeft="30dp"
+        android:layout_below="@+id/cyc_logo"
+        android:paddingRight="@dimen/fifteen_dp"
+        android:layout_centerVertical="true"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/activity_countdown_wheels_layout_mara"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:paddingLeft="@dimen/fifteen_dp"
+        android:paddingRight="@dimen/fifteen_dp"
+        android:paddingTop="@dimen/twenty_dp"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/activity_countdown_timer_note"
+        android:gravity="center" >
+
+        <org.enthusia.app.enthusia.fragments.TimerFragment.ProgressWheel
+            android:id="@+id/activity_countdown_timer_days_mara"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+            ProgressWheel:rimColor="@color/rim_color_gray"
+            ProgressWheel:barColor="@color/round_progress_blue"
+            ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <org.enthusia.app.enthusia.fragments.TimerFragment.ProgressWheel
+            android:id="@+id/activity_countdown_timer_hours_mara"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+            ProgressWheel:rimColor="@color/rim_color_gray"
+            ProgressWheel:barColor="@color/round_progress_blue"
+            ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <org.enthusia.app.enthusia.fragments.TimerFragment.ProgressWheel
+            android:id="@+id/activity_countdown_timer_minutes_mara"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+            ProgressWheel:rimColor="@color/rim_color_gray"
+            ProgressWheel:barColor="@color/round_progress_blue"
+            ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <org.enthusia.app.enthusia.fragments.TimerFragment.ProgressWheel
+            android:id="@+id/activity_countdown_timer_seconds_mara"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+            ProgressWheel:rimColor="@color/rim_color_gray"
+            ProgressWheel:barColor="@color/round_progress_blue"
+            ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_countdown_labels_layout_mara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/fifteen_dp"
+        android:paddingRight="@dimen/fifteen_dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/activity_countdown_wheels_layout" >
+
+        <TextView
+            android:id="@+id/activity_countdown_timer_days_text_mara"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/days"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/activity_countdown_timer_hours_text_mara"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/hours"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/activity_countdown_timer_minutes_text_mara"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/minutes"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/activity_countdown_timer_seconds_text_mara"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/seconds"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

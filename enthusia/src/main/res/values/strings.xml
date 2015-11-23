@@ -45,6 +45,7 @@
     <string name="enthusia_sponsors">Sponsors</string>
     <string name="enthusia_intra">Intra</string>
     <string name="enthusia_about">About Us</string>
+    <string name="enthusia_timer">Count Down</string>
     <string name="enthusia_all_read">You are up-to-date with our Fest!!</string>
     <string name="enthusia_sample_news"><![CDATA[Welcome to Enthusia!!<br />You will receive all the updates here.<br />
 Swipe the card to mark it as read.<br />
@@ -62,6 +63,7 @@ Once you receive updates this card will be automatically hidden]]></string>
         <item>@string/enthusia_intra</item>
         <item>@string/enthusia_register</item>
         <item>@string/enthusia_sponsors</item>
+        <item>@string/enthusia_timer</item>
         <item>@string/enthusia_committee</item>
         <item>@string/enthusia_about</item>
     </string-array>
@@ -72,6 +74,7 @@ Once you receive updates this card will be automatically hidden]]></string>
         <item>@drawable/ic_enthusia_intra</item>
         <item>@drawable/ic_enthusia_register</item>
         <item>@drawable/ic_enthusia_spons</item>
+        <item>@drawable/ic_schedule_black_24dp</item>
         <item>@drawable/ic_enthusia_committe</item>
         <item>@drawable/ic_enthu_about</item>
     </array>
@@ -170,4 +173,16 @@ Once you receive updates this card will be automatically hidden]]></string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_event_registration">Event Registration</string>
     <string name="title_activity_login">LoginActivity</string>
+
+
+    <string name="timer">CountDown Timer</string>
+    <string name="content_description">Content Description</string>
+    <string name="countdown_note">Countdown for cyclothon.\nGet Ready to experience the adrenaline Rush.</string>
+    <string name="countdown_note_mara">Countdown for marathon.\nGet Ready to experience the adrenaline Rush.</string>
+    <string name="days">days</string>
+    <string name="hours">hrs</string>
+    <string name="minutes">mins</string>
+    <string name="seconds">secs</string>
+    <string name="title_activity_countdown_timer">CountdownTimerActivity</string>
+
 </resources>

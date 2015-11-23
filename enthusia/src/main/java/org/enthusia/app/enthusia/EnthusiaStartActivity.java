@@ -41,6 +41,7 @@ import org.enthusia.app.R;
 import org.enthusia.app.enthusia.fragments.EnthusiaAboutFragment;
 import org.enthusia.app.enthusia.fragments.EnthusiaDepartmentHeadsFragment;
 import org.enthusia.app.enthusia.fragments.EnthusiaEventsFragment;
+import org.enthusia.app.enthusia.fragments.TimerFragment.EnthusiaTimerFragment;
 import org.enthusia.app.gcm.GCMIntentService;
 import org.enthusia.app.Utils;
 import org.enthusia.app.enthusia.adapters.EnthusiaNavDrawerAdapter;
@@ -49,6 +50,7 @@ import org.enthusia.app.enthusia.fragments.EnthusiaIntraFragment;
 import org.enthusia.app.enthusia.fragments.EnthusiaRegisterFragment;
 import org.enthusia.app.enthusia.fragments.EnthusiaNewsFragment;
 import org.enthusia.app.enthusia.fragments.EnthusiaSponsorsFragment;
+import org.enthusia.app.enthusia.fragments.TimerFragment.*;
 import org.enthusia.app.enthusia.model.EnthusiaNavDrawerItem;
 import org.enthusia.app.parse.LoginActivity;
 import org.enthusia.app.parse.helper.NotificationDBManager;
@@ -566,10 +568,14 @@ public class EnthusiaStartActivity extends ActionBarActivity {
                 currentFragment = new EnthusiaSponsorsFragment();
                 break;
             case 5:
+                getSupportActionBar().setTitle((getString(R.string.enthusia_timer)));
+                currentFragment = new EnthusiaTimerFragment();
+                break;
+            case 6:
                 getSupportActionBar().setTitle((getString(R.string.enthusia_committee)));
                 currentFragment = new EnthusiaCommitteeFragment();
                 break;
-            case 6:
+            case 7:
                 getSupportActionBar().setTitle((getString(R.string.enthusia_about)));
                 currentFragment = new EnthusiaAboutFragment();
                 break;
@@ -638,11 +644,15 @@ public class EnthusiaStartActivity extends ActionBarActivity {
             else if (currentFragment instanceof EnthusiaIntraFragment)
                 return 2;
             else if (currentFragment instanceof EnthusiaSponsorsFragment)
-                return 3;
-            else if (currentFragment instanceof EnthusiaCommitteeFragment)
                 return 4;
+            else if (currentFragment instanceof EnthusiaCommitteeFragment)
+                return 6;
             else if (currentFragment instanceof EnthusiaAboutFragment)
+                return 7;
+            else if(currentFragment instanceof  EnthusiaTimerFragment)
                 return 5;
+            else if(currentFragment instanceof EnthusiaRegisterFragment)
+                return 3;
         }
         return 0;
     }
@@ -696,9 +706,11 @@ public class EnthusiaStartActivity extends ActionBarActivity {
         if (title.equals("Sponsors"))
             return 4;
         if (title.equals("Committee"))
-            return 5;
-        if (title.equals("About Us"))
             return 6;
+        if (title.equals("About Us"))
+            return 7;
+        if(title.equals("Count Down"))
+            return 5;
         return 1;
     }
 

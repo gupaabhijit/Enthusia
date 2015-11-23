@@ -12,4 +12,10 @@
     <color name="app_color_dark">#173a9c</color>
     <color name="app_color_light">#4fc3f7</color>
     <color name="selectable_item_background">#e1f5fe</color>
+
+    <color name="mid_gray">#605F64</color>
+    <color name="gray_text">#7F8285</color>
+    <color name="rim_color_gray">#B0B0B0</color>
+    <color name="center_text">#D31145</color>
+    <color name="round_progress_blue">#2173B9</color>
 </resources>
